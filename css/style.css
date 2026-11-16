@@ -114,6 +114,12 @@ dd { margin: 0; }
   font-family: var(--mincho); font-size: 13px; letter-spacing: .24em; color: #f4f0e6;
 }
 
+/* ---------- 庭園解説 ---------- */
+.essay { max-width: 38em; margin-inline: auto; font-family: var(--mincho); font-size: 16px; line-height: 2.3; }
+.essay p { margin: 0; text-indent: 1em; }
+.essay .essay-lead { text-indent: 0; margin-bottom: 2.6em; padding: 0 0 2.4em; border-bottom: 1px solid var(--line); font-size: 18px; letter-spacing: .08em; }
+.essay .essay-credit { text-indent: 0; margin-top: 2.6em; text-align: right; font-size: 13px; color: var(--ink-soft); }
+
 /* ---------- お知らせ ---------- */
 .notice { background: #fbf9f3; border: 1px solid var(--line); border-top: 2px solid var(--shu); padding: clamp(28px, 4vw, 48px); max-width: 44em; }
 .notice-tag { margin: 0 0 8px; font-family: var(--mincho); font-size: 13px; letter-spacing: .26em; color: var(--shu); }
