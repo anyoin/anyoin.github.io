@@ -182,15 +182,16 @@ dd { margin: 0; }
   }
   .nav.open { display: flex; }
   .nav a { padding: 14px 0; border-bottom: 1px solid var(--line); }
-  /* スマホ：縦書きの題字を右側に寄せ、写真は手水鉢が左に来るよう切り取る（題字と重ねない） */
-  .hero { height: clamp(520px, 100svh, 620px); min-height: 0; }
-  .hero-art { object-position: 62% 50%; }
-  .hero::after { background: linear-gradient(90deg, rgba(20,18,14,.12) 0%, rgba(20,18,14,.3) 50%, rgba(20,18,14,.66) 100%); }
-  .hero-copy { top: 88px; right: 18px; transform: none; gap: 12px; }
-  .hero-label { font-size: 12px; letter-spacing: .32em; padding-top: 2px; }
-  .hero-title { font-size: 44px; letter-spacing: .2em; }
+  /* スマホ：写真は手水鉢を中央に。題字は縦書きのまま右端、添え書きは左下に置き、水面に重ねない */
+  .hero { height: clamp(560px, 100svh, 620px); min-height: 0; }
+  .hero-art { object-position: 40% 50%; }
+  .hero::after { background: linear-gradient(90deg, rgba(20,18,14,.3) 0%, rgba(20,18,14,.22) 45%, rgba(20,18,14,.6) 100%); }
+  .hero-copy { display: contents; }
+  .hero-copy > * { position: absolute; z-index: 1; font-family: var(--mincho); text-shadow: 0 1px 14px rgba(0,0,0,.7); }
+  .hero-label { top: 90px; right: 12px; font-size: 12px; letter-spacing: .32em; padding-top: 0; }
+  .hero-title { top: 88px; right: 36px; font-size: 44px; letter-spacing: .2em; }
   .hero-title span:first-child { font-size: 16px; margin-bottom: .9em; }
-  .hero-lead { padding-top: 5.5em; font-size: 14px; letter-spacing: .3em; line-height: 2.1; }
+  .hero-lead { left: 16px; bottom: 34px; padding-top: 0; font-size: 14px; letter-spacing: .3em; line-height: 2.1; }
   .two-col, .access-grid { grid-template-columns: 1fr; gap: 28px; }
   .garden-grid { grid-template-columns: 1fr; }
   .photos { grid-template-columns: 1fr 1fr; gap: 10px; }
